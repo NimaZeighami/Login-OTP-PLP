@@ -1,0 +1,112 @@
+@import "sitetheme";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $background;
+}
+h1{
+  font-size: 2.5rem;
+  padding-top: -10px;
+}
+:where(.container, form, .input-field, header) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box{
+  width:50rem;
+}
+
+#otp-png {
+  width: 100%;
+}
+.container header {
+  height: 65px;
+  width: 65px;
+  background: $background;
+  margin: auto;
+  font-size: 2.5rem;
+  border-radius: 50%;
+}
+h4 {
+  font-size: 1.25rem;
+  color: $color;
+  font-weight: 500;
+  text-align: right ;
+}
+form .input-field {
+  flex-direction: row;
+  column-gap: 10px;
+}
+.input-field input {
+  height: 45px;
+  width: 42px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.input-field input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button {
+  display: none;
+}
+
+/*responsive CSS*/
+@media (max-width: 576px) {
+  /* Extra small devices (portrait phones, less than 576px) */
+  .form-container {
+    width: 80%;
+  }
+  .box {
+    width: 100%;
+    margin: 0 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .box form button {
+    font-size: 0.8rem;
+  }
+  h4{
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  /* Small devices (landscape phones, 576px and up) */
+  .box {
+    width: 28rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  /* Medium devices (tablets, 768px and up) */
+  .box {
+    width: 40rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Large devices (desktops, 992px and up) */
+  .box {
+    width: 50rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Extra large devices (large desktops, 1200px and up) */
+  .box {
+    width: 60rem;
+  }
+}
+
